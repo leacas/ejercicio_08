@@ -6,9 +6,9 @@ metadata:
     name: passwordapi
 spec:
    selector:
-	 name: passwordapi
+     name: passwordapi
    ports:
-	 - protocol: TCP
+     - protocol: TCP
        port: 8080
-	   nodePort: 32080
+       nodePort: 32080
    type: NodePort
