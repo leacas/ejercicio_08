@@ -24,7 +24,7 @@ Conocer ip de mi cluster:
  
 Validar funcionamiento de api:
 <pre>$ minikube service passwordapi --url</pre>
-<pre>$ curl -L http://192.168.49.2:32080</pre>
+Ejemplo: <pre>$ curl -L http://192.168.49.2:32080</pre>
 - Para mi caso particular, donde tengo desplegado minikube sobre una vm en virtualbox sobre Windows.  
   Hay que ejecutar el siguiente comando sobre la vm para exponer el servicio y poder acceder vía navegador desde el windows:
    <pre>$ kubectl port-forward svc/passwordapi -n default 8080:8080 --address='0.0.0.0'</pre>
