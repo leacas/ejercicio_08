@@ -3,28 +3,29 @@
 Los pasos necesarios para desplegar la aplicación passwordapi en un cluster de kubernetes son:
 
 Para crear este Deployment, ejecuta el siguiente comando:
-   <code>kubectl create -f https://raw.githubusercontent.com/leacas/ejercicio_08/main/deployment.yaml</code> 
+ <pre>kubectl create -f deployment.yaml</pre>
+   
 Para validar el deployment creado:
- - kubectl get deployments passwordapi
- - kubectl describe deployment passwordapi
+ <pre>kubectl get deployments passwordapi</pre>
+ <pre>kubectl describe deployment passwordapi</pre>
 
 Para validar los pods:
- - kubectl get pod
+ <pre>kubectl get pod</pre>
 
 Para crear el service, ejecuta el siguiente comando:
- - kubectl create -f https://raw.githubusercontent.com/leacas/ejercicio_08/main/service.yaml
+ <pre>kubectl create -f service.yaml</pre>
 
 Para validar el service creado:
- - kubectl get svc passwordapi
- - kubectl describe service passwordapi
+ <pre>kubectl get svc passwordapi</pre>
+ <pre>kubectl describe service passwordapi</pre>
  
 Conocer ip de mi cluster: 
- - minikube ip = 192.168.49.2
+ <pre>minikube ip</pre>
  
 Validar funcionamiento de api:
-- minikube service passwordapi --url
-- curl -L http://192.168.49.2:32080
+<pre>minikube service passwordapi --url</pre>
+<pre>curl -L http://192.168.49.2:32080</pre>
 - Para mi caso particular, donde tengo desplegado minikube sobre una vm en virtualbox sobre Windows.  
   Hay que ejecutar el siguiente comando sobre la vm para exponer el servicio y poder acceder vía navegador desde el windows:
-   - kubectl port-forward svc/passwordapi -n default 8080:8080 --address='0.0.0.0'
+   <pre>kubectl port-forward svc/passwordapi -n default 8080:8080 --address='0.0.0.0'</pre>
    - Luego por navegador http://IP_HOST:8080
