@@ -3,8 +3,7 @@
 Los pasos necesarios para desplegar la aplicación passwordapi en un cluster de kubernetes son:
 
 Para crear este Deployment, ejecuta el siguiente comando:
- - kubectl create -f https://raw.githubusercontent.com/leacas/ejercicio_08/main/deployment.yaml
- 
+   <code>kubectl create -f https://raw.githubusercontent.com/leacas/ejercicio_08/main/deployment.yaml</code> 
 Para validar el deployment creado:
  - kubectl get deployments passwordapi
  - kubectl describe deployment passwordapi
